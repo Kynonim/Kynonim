@@ -52,7 +52,7 @@ Halo, nama saya **Riky Ripaldo**! Saya adalah seorang programmer yang… ya, sed
 ---
 
 ## 🧑‍💻 **Bahasa Yang gw Pake**
-<p><img style="background-color: black" align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=Kynonim&show_icons=true&locale=en&layout=compact" alt="rikyripaldo" /></p><br/>
+<div><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=Kynonim&show_icons=true&locale=en&layout=compact" alt="rikyripaldo" /></div>
 
 ---
 
