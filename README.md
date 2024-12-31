@@ -51,5 +51,9 @@ Halo, nama saya **Riky Ripaldo**! Saya adalah seorang programmer yang… ya, sed
 
 ---
 
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=Kynonim&show_icons=true&locale=en&layout=compact" alt="rikyripaldo" /></p>
+
+---
+
 #### © 2025 Riky Ripaldo  
 Dibuat sambil rebahan dan sedikit ngantuk. 😜
