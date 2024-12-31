@@ -40,9 +40,9 @@ Halo, nama saya **Riky Ripaldo**! Saya adalah seorang programmer yang… ya, sed
 ---
 
 ## 📫 **Hubungi Saya**  
-- 🌐 **GitHub**: [github.com/RikyRipaldo](https://github.com/RikyRipaldo)  
-- 🐦 **Twitter**: [@RikyRipaldo](https://twitter.com/RikyRipaldo)  
-- 💌 **Email**: [riky.ripaldo@example.com](mailto:riky.ripaldo@example.com)  
+- 🌐 **GitHub**: [github.com/Kynonim](https://github.com/Kynonim)  
+- 🐦 **Facebook**: [@RikyXDZ](https://www.facebook.com/RikyXDZ)  
+- 💌 **Instagram**: [@rikyxdz](https://www.instagram.com/rikyxdz)  
 
 ---
 
@@ -52,4 +52,4 @@ Halo, nama saya **Riky Ripaldo**! Saya adalah seorang programmer yang… ya, sed
 ---
 
 #### © 2025 Riky Ripaldo  
-Dibuat sambil rebahan dan ngopi. ☕
+Dibuat sambil rebahan dan sedikit ngantuk. 😜
