@@ -48,7 +48,7 @@ Halo, nama saya **Riky Ripaldo**! Saya adalah seorang programmer yang… ya, sed
 
 ## 🤣 **Salah Satu Pengalaman yang gw punya**
 - 🐬 **Pabrik Pengolahan Hasil Laut Jepang**:
-  [千倉水産加工 - Pengolahan Hasil Laut Chikura](https://images.app.goo.gl/4FYRWxkudze65nFB)
+  [千倉水産加工 - Pengolahan Hasil Laut Chikura](https://www.google.com/imgres?imgurl=https://lpkokagemandiri.com/sitepad-data/uploads/2023/08/Riky-Ripaldo.png&tbnid=Q59GHTBYfvRKLM&vet=1&imgrefurl=https://lpkokagemandiri.com/&docid=Q1wgFtqP3khmjM&w=500&h=500&hl=id-jp&source=sh/x/im/m1/3&kgs=3917dc8bc09b0fea)
 
 ---
 
