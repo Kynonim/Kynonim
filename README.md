@@ -31,6 +31,14 @@ Halo, nama saya **Riky Ripaldo**! Saya adalah seorang programmer yang… ya, sed
 
 ---
 
+## **Github Page**
+- [Simple Profile](https://kynonim.github.io/about.html)
+- [Cryptarithm](https://kynonim.github.io/index.html)
+- [New Year](https://kynonim.github.io/api.html)
+- [Tic Tac Toe](https://kynonim.github.io/t3.html)
+
+---
+
 ## 🛠️ **Tips untuk Programmer Malas**
 0. **ChatGPT adalah Pendamping terbaik**: Kalau lagi males banget ngodingnya atau udah pusing coba suruh ChatGPT atau AI lainnya buat kerja rodi.
 1. **Google adalah Teman Baikmu**: Jangan hafalin semua, cari aja kalau butuh.  
