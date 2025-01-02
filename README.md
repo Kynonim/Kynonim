@@ -31,7 +31,7 @@ Halo, nama saya **Riky Ripaldo**! Saya adalah seorang programmer yang… ya, sed
 
 ---
 
-## **Github Page**
+## 📝 **Github Page**
 - [Simple Profile](https://kynonim.github.io/about.html)
 - [Cryptarithm](https://kynonim.github.io/index.html)
 - [New Year](https://kynonim.github.io/api.html)
