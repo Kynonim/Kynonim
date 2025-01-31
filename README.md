@@ -25,25 +25,27 @@ Halo, nama saya **Riky Ripaldo**! Saya adalah seorang programmer yang… ya, sed
 ## 🎉 **Proyek Andalan Saya**  
 | 🦥 Proyek                | 🚀 Deskripsi Singkat                              | 🔗 Tautan                          |
 |--------------------------|--------------------------------------------------|------------------------------------|
-| 🎆 **Cryptarithm**         | Operasi Matematika untuk ngasah otak.                 | [Lihat Proyek](https://github.com/Kynonim/kynonim.github.io) |
+| 🤪 **MiniServe**         | CRUD dengan bahasa Rust                          | [Lihat Proyek](https://github.com/Kynonim/MiniServe) |
+| 🎆 **Cryptarithm**         | Operasi Matematika untuk ngasah otak.                 | [Lihat Proyek](https://github.com/Kynonim/Cryptarithm) |
 | 📱 **Aplikasi Chat**    | Aplikasi simple untuk chat menggunakan firebase.            | [Lihat Proyek](https://github.com/Kynonim/Chatku) |
 | 🛠️ **Proyek Bekas**| Proyek Python dari fork dan ada juga yang di buat sendiri.              | [Lihat Proyek](https://github.com/Kynonim/riky) |
 
 ---
 
 ## 📝 **Github Page**
-- [Simple Profile](https://kynonim.github.io/about.html)
-- [Cryptarithm](https://kynonim.github.io/index.html)
+- [Simple Profile](https://kynonim.github.io)
+- [Cryptarithm](https://kynonim.github.io/cryptarithm.html)
 - [New Year](https://kynonim.github.io/api.html)
 - [Tic Tac Toe](https://kynonim.github.io/t3.html)
 
 ---
 
 ## 🛠️ **Tips untuk Programmer Malas**
-0. **ChatGPT adalah Pendamping terbaik**: Kalau lagi males banget ngodingnya atau udah pusing coba suruh ChatGPT atau AI lainnya buat kerja rodi.
-1. **Google adalah Teman Baikmu**: Jangan hafalin semua, cari aja kalau butuh.  
-2. **Pakai StackOverflow**: Kalau ada masalah, pasti ada orang lain yang udah nemuin solusinya duluan.  
-3. **Gunakan Framework**: Biar kerjaan cepat kelar tanpa ribet.  
+0. **DeepSeek AI yang bagus dan akurat buat orang malas kayak gua.**
+1. **ChatGPT adalah Pendamping terbaik**: Kalau lagi males banget ngodingnya atau udah pusing coba suruh ChatGPT atau AI lainnya buat kerja rodi.
+2. **Google adalah Teman Baikmu**: Jangan hafalin semua, cari aja kalau butuh.  
+3. **Pakai StackOverflow**: Kalau ada masalah, pasti ada orang lain yang udah nemuin solusinya duluan.  
+4. **Gunakan Framework**: Biar kerjaan cepat kelar tanpa ribet.  
 
 ---
 
