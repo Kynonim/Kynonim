@@ -1,0 +1,18 @@
+[package]
+name = "riky"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gloo = { version = "0.11.0", features = ["timers", "events"] }
+web-sys = { version = "0.3.77", features = [
+  "Window",
+  "Document",
+  "Element",
+  "HtmlElement",
+  "HtmlDivElement",
+  "CssStyleDeclaration",
+  "DomRect",
+]}
+yew = { version = "0.21.0", features = ["csr"] }
+yew-router = "0.18.0"

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+.latarbelakang {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.latarbelakang i {
+  position: absolute;
+  background: radial-gradient(circle, #8ab4ff, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: latar 6s infinite;
+  filter: blur(0.5px);
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.motivasi-acak {
+  position: absolute;
+  font-weight: bold;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(255, 254, 254, 0.3);
+  animation: acak 5s ease-in-out forwards;
+}
+
+@keyframes acak {
+  0%   { opacity: 0; transform: scale(0.8); }
+  20%  { opacity: 1; transform: scale(1); }
+  80%  { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes latar {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}

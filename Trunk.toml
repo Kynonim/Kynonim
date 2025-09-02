@@ -1,0 +1,15 @@
+[build]
+target = "index.html"
+html_output = "index.html"
+release = true
+dist = "public/dist"
+public_url = "/"
+filehash = false
+inject_scripts = true
+offline = false
+
+[serve]
+addresses = ["127.0.0.1"]
+port = 8000
+aliases = ["http://kynonim.com"]
+ws_protocol = "ws"
