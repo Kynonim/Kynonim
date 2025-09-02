@@ -34,9 +34,9 @@ Halo, nama saya **Riky Ripaldo**! Saya adalah seorang programmer yang… ya, sed
 
 ## 📝 **Github Page**
 - [Simple Profile](https://kynonim.github.io)
-- [Cryptarithm](https://kynonim.github.io/cryptarithm.html)
-- [New Year](https://kynonim.github.io/api.html)
-- [Tic Tac Toe](https://kynonim.github.io/t3.html)
+- [Cryptarithm](https://kynonim.github.io/static/cryptarithm.html)
+- [New Year](https://kynonim.github.io/static/api.html)
+- [Tic Tac Toe](https://kynonim.github.io/static/t3.html)
 
 ---
 
