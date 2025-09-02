@@ -223,6 +223,7 @@ pub fn navbar() -> Html {
             <Link<Route> to={Route::GamePages} classes="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Game"}</Link<Route>>
             <Link<Route> to={Route::CryptarithmPages} classes="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Cryptarithm"}</Link<Route>>
             <Link<Route> to={Route::MotivasiPages} classes="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Motivasi"}</Link<Route>>
+            <li><a href="https://kynonim.github.io/static/index.html" class="flex text-white duration-300 hover:text-[#38bdf8] hover:scale-110">{"Old Portofolio"}</a></li>
             <li>
               <button onclick={
                 let show = tampilkan.clone();
