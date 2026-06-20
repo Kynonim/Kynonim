@@ -4,7 +4,7 @@ html_output = "index.html"
 release = true
 dist = "public/dist"
 public_url = "/"
-filehash = false
+filehash = true
 inject_scripts = true
 offline = false
 
