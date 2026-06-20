@@ -1,5 +1,3 @@
-use yew_router::Routable;
-
 pub struct Proyek {
   pub title: &'static str,
   pub desc: &'static str,
@@ -50,28 +48,11 @@ pub const WARNA: [&str; 4] = [
 ];
 
 pub const MOTIVASI: [&str; 14] = [
-    "Hallo Enggan Ngoding", "Jangan Ngoding", "Mending Turu", "Scroll Facebook Aja",
-    "Mending Main Game", "Mending Nonton Anime", "Mending Nonton Film", "Mending Nonton TV",
-    "Coding Hanya Buang Waktu", "Hapus VSCodenya", "Coding Hanyalah Tipuan", "Tetap Malas Ya",
-    "Jangan Semanggat", "Jangan Pikirkan Masa Depan",
+  "Hallo Enggan Ngoding", "Jangan Ngoding", "Mending Turu", "Scroll Facebook Aja",
+  "Mending Main Game", "Mending Nonton Anime", "Mending Nonton Film", "Mending Nonton TV",
+  "Coding Hanya Buang Waktu", "Hapus VSCodenya", "Coding Hanyalah Tipuan", "Tetap Malas Ya",
+  "Jangan Semanggat", "Jangan Pikirkan Masa Depan",
 ];
-
-#[derive(Clone, Routable, PartialEq)]
-pub enum Route {
-	#[at("/")]
-	PortofolioPages,
-	#[at("/game")]
-	GamePages,
-	#[at("/bucin")]
-	BucinPages,
-	#[at("/cryptarithm")]
-	CryptarithmPages,
-	#[at("/motivasi")]
-	MotivasiPages,
-	#[not_found]
-	#[at("/404")]
-	SiapaYangTau,
-}
 
 pub const GAME_KONTEN: [&str; 6] = ["Hallo Apa Kabar ?", "Baik Ya", "Selamat Datang Di..", "Tic Tac Toe", "Versus Bot", "Ayo Kalahkan Bot"];
 pub const GAME_WARNA: [&str; 6] = ["#FF5733", "#33FF57", "#f5ff33", "#FF3357", "#7E33FFFF", "#33C9FFFF"];

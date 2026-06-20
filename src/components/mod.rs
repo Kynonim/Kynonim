@@ -1,12 +1,10 @@
-use yew::prelude::*;
-use yew_router::prelude::*;
-use crate::{components::section::LatarBelakang, utils::statis::Route};
+use leptos::prelude::*;
 
 pub mod section;
 
-#[function_component(SiapaYangTau)]
-pub fn siapa_yang_tau() -> Html {
-  html! {
+#[component]
+pub fn SiapaYangTau() -> impl IntoView {
+  view! {
     <div class="flex flex-col items-center justify-center min-h-screen bg-[#0b0b0f] text-white">
       <LatarBelakang/>
       <h1 class="text-6xl font-bold">{"404"}</h1>

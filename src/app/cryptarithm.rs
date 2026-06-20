@@ -1,11 +1,11 @@
+use leptos::prelude::*;
 use std::{collections::{HashMap, HashSet}};
 use web_sys::HtmlInputElement;
-use yew::prelude::*;
 
 use crate::components::section::LatarBelakang;
 
-#[function_component(CryptarithmPages)]
-pub fn cryptarithm_pages() -> Html {
+#[component]
+pub fn CryptarithmPages() -> Html {
   let kata_1 = use_state(|| String::new());
   let kata_2 = use_state(|| String::new());
   let kata_3 = use_state(|| String::new());
@@ -92,7 +92,7 @@ pub fn cryptarithm_pages() -> Html {
     })
   };
 
-  html! {
+  view! {
     <div class="min-h-screen bg-[#0b0b0f] text-white antialiased flex justify-center items-start pt-10">
       <LatarBelakang/>
       <div class="bg-black/20 p-6 rounded-xl shadow-xl w-[500px]">

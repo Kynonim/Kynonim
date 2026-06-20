@@ -1,12 +1,11 @@
+use leptos::prelude::*;
 use gloo::{timers::callback::Timeout, utils::document};
-use web_sys::{js_sys::{Date, Math}, Element, HtmlElement};
-use yew::prelude::*;
-use yew_router::prelude::*;
+use web_sys::{js_sys::{Math}, Element, HtmlElement};
 
-use crate::utils::{image::*, statis::*};
+use crate::utils::{icons::*, statis::*};
 
-#[function_component(MainContent)]
-pub fn main_content() -> Html {
+#[component]
+pub fn MainContent() -> Html {
   let card_reference = use_node_ref();
   let konten_reference = use_node_ref();
   let karakter_index = use_state(|| 0);
@@ -80,7 +79,7 @@ pub fn main_content() -> Html {
     })
   };
 
-  html! {
+  view! {
     <div class="grid md:grid-cols-2 gap-10 items-center">
 
       // nama dan info
@@ -121,9 +120,9 @@ pub fn main_content() -> Html {
   }
 }
 
-#[function_component(MainProyek)]
-pub fn main_proyek() -> Html {
-  html! {
+#[component]
+pub fn MainProjects() -> impl IntoView {
+  view! {
     <section id="proyek" class="mt-20">
       <h2 class="text-3xl font-bold">{"My Proyek"}</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
@@ -150,9 +149,9 @@ pub fn main_proyek() -> Html {
   }
 }
 
-#[function_component(MainSkill)]
-pub fn main_skill() -> Html {
-  html! {
+#[component]
+pub fn MainSkills() -> impl IntoView {
+  view! {
     <section id="skill" class="mt-20">
       <h2 class="text-3xl font-bold">{"My Skill"}</h2>
       <div class="grid md:grid-cols-2 gap-6 mt-6">
@@ -177,9 +176,9 @@ pub fn main_skill() -> Html {
   }
 }
 
-#[function_component(MainKontak)]
-pub fn main_kontak() -> Html {
-  html! {
+#[component]
+pub fn MainContacts() -> impl IntoView {
+  view! {
     <section id="kontak" class="mt-20 mb-28">
       <h2 class="text-3xl font-bold">{"Contact - About me"}</h2>
       <div class="rounded-2xl border border-white/10 bg-white/5 p-8 mt-6 text-center">
@@ -197,8 +196,8 @@ pub fn main_kontak() -> Html {
   }
 }
 
-#[function_component(Navbar)]
-pub fn navbar() -> Html {
+#[component]
+pub fn Navbar() -> impl IntoView {
   let tampilkan = use_state(|| false);
 
   let klik = {
@@ -206,7 +205,7 @@ pub fn navbar() -> Html {
     Callback::from(move |_e: MouseEvent| tampilkan.set(!*tampilkan))
   };
 
-  html! {
+  view! {
     <div class="fixed top-4 right-4 z-50">
 			<button class="p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10"
 				onclick={klik} aria-label="Open menu">
@@ -237,9 +236,10 @@ pub fn navbar() -> Html {
   }
 }
 
-#[function_component(LatarBelakang)]
-pub fn latar_belakang() -> Html {
+#[component]
+pub fn LatarBelakang() -> impl IntoView {
   let node = use_node_ref();
+
   {
     let node = node.clone();
     use_effect(move || {
@@ -261,7 +261,7 @@ pub fn latar_belakang() -> Html {
     });
   }
 
-  html! {
+  view! {
     <div ref={node} class={"latarbelakang"}></div>
   }
 }
