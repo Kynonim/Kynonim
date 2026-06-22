@@ -219,8 +219,8 @@ pub fn Navbar() -> impl IntoView {
         format!("{} translate-y-[200%] opacity-0", myclass)
       }
     }>
-			<a href="/" class="text-white/80 hover:text-white transition-colors duration-200">"Beranda"</a>
-			<a href="/game" class="text-white/80 hover:text-white transition-colors duration-200">"Game"</a>
+			<a href="/" class="text-white/80 hover:text-white transition-colors duration-200">"Home"</a>
+			<a href="/cryptarithm" class="text-white/80 hover:text-white transition-colors duration-200">"Crypt"</a>
 		</nav>
   }
 }

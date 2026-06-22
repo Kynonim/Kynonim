@@ -1,3 +1,6 @@
+pub mod cryptarithm;
+pub use cryptarithm::CryptarithmPage;
+
 use leptos::{ev, prelude::*};
 use crate::components::section::*;
 

@@ -1,6 +1,6 @@
 use leptos::prelude::*;
 use leptos_router::{components::{Route, Router, Routes}, path};
-use riky::{app::BerandaPage, components::{SiapaYangTau, section::*}};
+use riky::{app::{BerandaPage, CryptarithmPage}, components::{SiapaYangTau, section::*}};
 
 #[component]
 fn App() -> impl IntoView {
@@ -9,7 +9,7 @@ fn App() -> impl IntoView {
 		  <Navbar />
 		  <Routes fallback=|| view! { <SiapaYangTau /> }>
 				<Route path=path!("") view=BerandaPage />
-				<Route path=path!("/game") view=MainProjects />
+				<Route path=path!("/cryptarithm") view=CryptarithmPage />
 			</Routes>
 		</Router>
 	}
