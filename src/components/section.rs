@@ -1,5 +1,5 @@
 use gloo_timers::future::TimeoutFuture;
-use leptos::{html, prelude::*, task::spawn_local};
+use leptos::{ev, html, prelude::*, task::spawn_local};
 use web_sys::{MouseEvent, js_sys::{Date, Math}};
 
 use crate::utils::{icons::*, statis::*};
@@ -57,7 +57,7 @@ pub fn MainContent() -> impl IntoView {
       let rect = element.get_bounding_client_rect();
       let mx = e.client_x() as f64 - (rect.left() + rect.width() / 2.0);
       let my = e.client_y() as f64 - (rect.top() + rect.height() / 2.0);
-      
+
       let style = (*element).style();
       let _ = style.set_property("--mx", &format!("{}px", mx * 0.03));
       let _ = style.set_property("--my", &format!("{}px", my * 0.03));
@@ -80,18 +80,18 @@ pub fn MainContent() -> impl IntoView {
     <div class="grid md:grid-cols-2 gap-10 items-center">
       // nama dan info
       <div>
-        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">{"Lagi Nganggur 😂"}</div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">"Lagi Nganggur 😂"</div>
         <div class="relative h-[80px]">
-          <h1 class="absolute top-0 left-0 w-full" style={format!("{}; -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 900; font-size: clamp(34px, 5vw, 60px);", WARNA[teks_index.get()])} node_ref=konten_reference >{"Riky Ripaldo"}</h1>
+          <h1 class="absolute top-0 left-0 w-full" style={format!("{}; -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 900; font-size: clamp(34px, 5vw, 60px);", WARNA[teks_index.get()])} node_ref=konten_reference >"Riky Ripaldo"</h1>
         </div>
-        <span class="text-white text-3xl">{"Programmer Malas | Enggan Ngoding"}</span>
-        <p class="mt-4 text-white/70 max-w-xl">{"AI terus belajar, Kamu terus rebahan — Mimpi jadi Programmer cuma jadi status doang"}</p>
-        
+        <span class="text-white text-3xl">"Programmer Malas | Enggan Ngoding"</span>
+        <p class="mt-4 text-white/70 max-w-xl">"AI terus belajar, Kamu terus rebahan — Mimpi jadi Programmer cuma jadi status doang"</p>
+
         <div class="mt-8 flex items-center gap-3">
-          <a class="relative inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white/10 hover:bg-white/15 border border-white/10 hover:shadow-[0_0_25px_white]" href="https://github.com/Kynonim?tab=repositories" target="_blank">{"Lihat Proyek"}
+          <a class="relative inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white/10 hover:bg-white/15 border border-white/10 hover:shadow-[0_0_25px_white]" href="https://github.com/Kynonim?tab=repositories" target="_blank">"Lihat Proyek"
             <IconProject />
           </a>
-          <a class="relative inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white/5 border border-white/10" href="/motivasi">{"Motivasi"}</a>
+          <a class="relative inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white/5 border border-white/10" href="/motivasi">"Motivasi"</a>
         </div>
       </div>
 
@@ -103,15 +103,14 @@ pub fn MainContent() -> impl IntoView {
             <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0f] via-transparent to-transparent"></div>
             <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
               <div class="text-sm">
-                <div class="font-semibold">{"Live Preview"}</div>
-                <div class="text-white/70">{"Github Avatar"}</div>
+                <div class="font-semibold">"Live Preview"</div>
+                <div class="text-white/70">"Github Avatar"</div>
               </div>
-              <a href="/cryptarithm" class="inline-flex items-center gap-1 text-sm bg-white/10 px-3 py-1 rounded-full border border-white/10 hover:bg-white/15">{"Kynonim"}</a>
+              <a href="/cryptarithm" class="inline-flex items-center gap-1 text-sm bg-white/10 px-3 py-1 rounded-full border border-white/10 hover:bg-white/15">"Kynonim"</a>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   }
 }
@@ -119,11 +118,11 @@ pub fn MainContent() -> impl IntoView {
 #[component]
 pub fn MainProjects() -> impl IntoView {
   view! {
-    <section id="proyek" class="mt-20">
-      <h2 class="text-3xl font-bold">{"My Proyek"}</h2>
+    <section id="projects" class="mt-20">
+      <h2 class="text-3xl font-bold">"My Projects"</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
       {
-        let _ = PROYEK.iter().map(|value| view! {
+        PROYEK.iter().map(|value| view! {
           <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-0">
             <img src=value.image alt=value.title class="h-48 w-full object-cover"/>
             <div class="p-4">
@@ -131,14 +130,14 @@ pub fn MainProjects() -> impl IntoView {
               <p class="text-sm text-white/80 mt-1">{value.desc}</p>
               <div class="flex gap-2 flex-wrap mt-3">
               {
-                let _ = value.tags.iter().map(|tag| view! {
+                value.tags.iter().map(|tag| view! {
                   <span class="text-xs rounded-full border border-white/10 bg-white/5 px-2 py-0.5">{*tag}</span>
-                });
+                }).collect::<Vec<_>>()
               }
               </div>
             </div>
           </div>
-        });
+        }).collect::<Vec<_>>()
       }
       </div>
     </section>
@@ -149,10 +148,10 @@ pub fn MainProjects() -> impl IntoView {
 pub fn MainSkills() -> impl IntoView {
   view! {
     <section id="skill" class="mt-20">
-      <h2 class="text-3xl font-bold">{"My Skill"}</h2>
+      <h2 class="text-3xl font-bold">"My Skills"</h2>
       <div class="grid md:grid-cols-2 gap-6 mt-6">
       {
-        let _ = SKILL.iter().map(|value| view! {
+        SKILL.iter().map(|value| view! {
           <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
             <div class="flex items-center justify-between mb-2">
               <div class="flex items-center gap-2 text-sm">
@@ -163,9 +162,9 @@ pub fn MainSkills() -> impl IntoView {
             </div>
             <div class="h-2 rounded-full bg-white/10 overflow-hidden">
               <div class="h-full bg-gradient-to-r from-cyan-400 to-violet-400" style={format!("width: {}%", value.level)}></div>
-            </div> 
+            </div>
           </div>
-        });
+        }).collect::<Vec<_>>()
       }
       </div>
     </section>
@@ -176,9 +175,9 @@ pub fn MainSkills() -> impl IntoView {
 pub fn MainContacts() -> impl IntoView {
   view! {
     <section id="kontak" class="mt-20 mb-28">
-      <h2 class="text-3xl font-bold">{"Contact - About me"}</h2>
+      <h2 class="text-3xl font-bold">"Contacts - About me"</h2>
       <div class="rounded-2xl border border-white/10 bg-white/5 p-8 mt-6 text-center">
-        <p class="text-white/80 max-w-2xl mx-auto">{"Kamu terlalu rajin ngoding dan ingin jadi malas? Yuk ngobrol sini."}</p>
+        <p class="text-white/80 max-w-2xl mx-auto">"Kamu terlalu rajin ngoding dan ingin jadi malas? Yuk ngobrol sini."</p>
         <div class="mt-6 flex items-center justify-center gap-3">
           <a class="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-white/10 border border-white/10 hover:shadow-[0_0_25px_white] hover:scale-110 duration-500" href="mailto:rikyripaldo@icloud.com"><IconEmail/></a>
           <a class="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-white/10 border border-white/10 hover:shadow-[0_0_25px_white] hover:scale-110 duration-500" href="https://github.com/Kynonim"><IconGithub/></a>
@@ -194,42 +193,31 @@ pub fn MainContacts() -> impl IntoView {
 
 #[component]
 pub fn Navbar() -> impl IntoView {
-  let tampilkan = RwSignal::new(false);
+  let is_show_navbar = RwSignal::new(true);
+  let last_scroll_pos = RwSignal::new(0.0);
 
-  let klik = move |_| {
-    tampilkan.set(!tampilkan.get());
-  };
+  window_event_listener(ev::scroll, move |_| {
+    if let Some(win) = web_sys::window() {
+      let pos_now = win.scroll_y().unwrap_or_default();
+      let pos_old = last_scroll_pos.get();
+
+      if pos_now > pos_old && pos_now > 50.0 {
+        is_show_navbar.set(false);
+      } else {
+        is_show_navbar.set(true);
+      }
+      last_scroll_pos.set(pos_now);
+    }
+  });
 
   view! {
-    <div class="fixed top-4 right-4 z-50">
-			<button class="p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10"
-				on:click={klik} aria-label="Open menu">
-				<IconHamburgers/>
-			</button>
-      {move || {
-        if tampilkan.get() {
-          Some(view! {
-            <div class="absolute top-14 right-0 w-56 rounded-2xl border border-white/10 bg-white/5 p-8 mt-6">
-              <ul class="space-y-2">
-                <li><a href="#home" class="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Beranda"}</a></li>
-                <li><a href="#proyek" class="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Proyek"}</a></li>
-                <li><a href="#skill" class="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Skill"}</a></li>
-                <li><a href="#kontak" class="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Kontak"}</a></li>
-                <a href="/game" class="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Game"}</a>
-                <a href="/crypt" class="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Cryptarithm"}</a>
-                <a href="/motivasi" class="flex text-white duration-300 hover:text-[#6366f1] hover:scale-110">{"Motivasi"}</a>
-                <li><a href="https://kynonim.github.io/static/index.html" class="flex text-white duration-300 hover:text-[#38bdf8] hover:scale-110">{"Old Portofolio"}</a></li>
-                <li>
-                  <button on:click=move |_| tampilkan.set(false) class="flex text-red-500 duration-300 hover:text-[#10b981] hover:scale-110">{"Close"}</button>
-                </li>
-              </ul>
-            </div>
-          })
-        } else {
-          None
-        }
-      }}
-		</div>
+    <nav
+				class=format!("fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-6 px-6 py-3 rounded-full border border-white/10 bg-black/40 backdrop-blur-md shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] transition-all duration-300 ease-in-out {}",
+				if is_show_navbar.get() {"translate-y-0 opacity-100"} else {"translate-y-[200%] opacity-0"})
+			>
+				<a href="/" class="text-white/80 hover:text-white transition-colors duration-200">"Beranda"</a>
+				<a href="/game" class="text-white/80 hover:text-white transition-colors duration-200">"Game"</a>
+		</nav>
   }
 }
 
@@ -255,6 +243,6 @@ pub fn LatarBelakang() -> impl IntoView {
   });
 
   view! {
-    <div node_ref=node class={"latarbelakang"}></div>
+    <div node_ref=node class="latar-belakang"></div>
   }
 }

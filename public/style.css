@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
-.latarbelakang {
+.latar-belakang {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
-.latarbelakang i {
+.latar-belakang i {
   position: absolute;
   background: radial-gradient(circle, #8ab4ff, transparent 70%);
   border-radius: 50%;
