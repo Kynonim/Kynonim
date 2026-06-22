@@ -34,7 +34,7 @@ pub static PROYEK: &[Proyek] = &[
 
 pub static SKILL: &[Skill] = &[
   Skill { name: "React", level: 12, icon: "JS/TS"},
-  Skill { name: "Yew", level: 15, icon: "Rust"},
+  Skill { name: "Leptos", level: 8, icon: "Rust"},
   Skill { name: "Actix", level: 2, icon: "Rust"},
   Skill { name: "Scroll Fesnuk", level: 99, icon: "Imphnen"},
 ];
