@@ -121,7 +121,7 @@ pub fn GamePage() -> impl IntoView {
                 view! { <p class="text-amber-400 drop-shadow-[0_0_10px_rgba(248,113,113,0.4)]">"Bot Menang!"</p> }.into_any()
             }
           } else if is_seri.get() {
-            view! { <p class="text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.4)]">"Gane Seri!"</p> }.into_any()
+            view! { <p class="text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.4)]">"Game Seri!"</p> }.into_any()
           } else if giliran.get() == 'X' {
             view! { <p class="text-green-400">"Giliran Kamu (X)"</p> }.into_any()
           } else {
