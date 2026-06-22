@@ -211,12 +211,16 @@ pub fn Navbar() -> impl IntoView {
   });
 
   view! {
-    <nav
-				class=format!("fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-6 px-6 py-3 rounded-full border border-white/10 bg-black/40 backdrop-blur-md shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] transition-all duration-300 ease-in-out {}",
-				if is_show_navbar.get() {"translate-y-0 opacity-100"} else {"translate-y-[200%] opacity-0"})
-			>
-				<a href="/" class="text-white/80 hover:text-white transition-colors duration-200">"Beranda"</a>
-				<a href="/game" class="text-white/80 hover:text-white transition-colors duration-200">"Game"</a>
+    <nav class=move || {
+      let myclass = "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-6 px-6 py-3 rounded-full border border-white/10 bg-black/40 backdrop-blur-md shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] transition-all duration-300 ease-in-out";
+      if is_show_navbar.get() {
+        format!("{} translate-y-0 opacity-100", myclass)
+      } else {
+        format!("{} translate-y-[200%] opacity-0", myclass)
+      }
+    }>
+			<a href="/" class="text-white/80 hover:text-white transition-colors duration-200">"Beranda"</a>
+			<a href="/game" class="text-white/80 hover:text-white transition-colors duration-200">"Game"</a>
 		</nav>
   }
 }

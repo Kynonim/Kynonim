@@ -5,14 +5,13 @@ use crate::components::section::*;
 pub fn BerandaPage() -> impl IntoView {
   view! {
     <div class="min-h-screen bg-[#0b0b0f] text-white antialized">
-      <Navbar />
       <div class="relative overflow-hidden">
         <LatarBelakang />
         <main class="mx-auto max-w-6xl px-4 pt-20 pb-36 space-y-20">
           <MainContent />
           <Animasi ambang={500.0} durasi="1000" arah="left"><MainProjects /></Animasi>
-					<Animasi ambang={900.0} durasi="800" arah="right"><MainSkills /></Animasi>
-					<Animasi ambang={1000.0} arah="up"><MainContacts /></Animasi>
+  				<Animasi ambang={900.0} durasi="800" arah="right"><MainSkills /></Animasi>
+  				<Animasi ambang={1000.0} arah="up"><MainContacts /></Animasi>
         </main>
       </div>
     </div>

@@ -6,6 +6,7 @@ use riky::{app::BerandaPage, components::{SiapaYangTau, section::*}};
 fn App() -> impl IntoView {
 	view! {
 		<Router>
+		  <Navbar />
 		  <Routes fallback=|| view! { <SiapaYangTau /> }>
 				<Route path=path!("") view=BerandaPage />
 				<Route path=path!("/game") view=MainProjects />
