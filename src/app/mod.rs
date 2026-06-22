@@ -1,5 +1,7 @@
 pub mod cryptarithm;
+pub mod game;
 pub use cryptarithm::CryptarithmPage;
+pub use game::GamePage;
 
 use leptos::{ev, prelude::*};
 use crate::components::section::*;

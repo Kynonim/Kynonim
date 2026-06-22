@@ -221,6 +221,7 @@ pub fn Navbar() -> impl IntoView {
     }>
 			<a href="/" class="text-white/80 hover:text-white transition-colors duration-200">"Home"</a>
 			<a href="/cryptarithm" class="text-white/80 hover:text-white transition-colors duration-200">"Crypt"</a>
+			<a href="/game" class="text-white/80 hover:text-white transition-colors duration-200">"Game"</a>
 		</nav>
   }
 }
