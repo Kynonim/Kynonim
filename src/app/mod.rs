@@ -1,7 +1,10 @@
 pub mod cryptarithm;
 pub mod game;
+pub mod motivasi;
+
 pub use cryptarithm::CryptarithmPage;
 pub use game::GamePage;
+pub use motivasi::MotivasiPage;
 
 use leptos::{ev, prelude::*};
 use crate::components::section::*;

@@ -1,7 +1,7 @@
 use gloo_timers::future::TimeoutFuture;
 use leptos::{ev, html, prelude::*, task::spawn_local};
+use leptos_router::components::A;
 use web_sys::{MouseEvent, js_sys::{Date, Math}};
-
 use crate::utils::{icons::*, statis::*};
 
 #[component]
@@ -89,7 +89,7 @@ pub fn MainContent() -> impl IntoView {
 
         <div class="mt-8 flex items-center gap-3">
           <a class="relative inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white/10 hover:bg-white/15 border border-white/10 hover:shadow-[0_0_25px_white]" href="https://github.com/Kynonim?tab=repositories" target="_blank">"Lihat Proyek"
-            <IconProject />
+            <IconArrowRight />
           </a>
           <a class="relative inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white/5 border border-white/10" href="/motivasi">"Motivasi"</a>
         </div>
@@ -210,6 +210,9 @@ pub fn Navbar() -> impl IntoView {
     }
   });
 
+  let base_lncs = "text-white/60 hover:text-white hover:scale-115 transition-all duration-200 ease-in-out";
+  let active_lncs = "aria-[current]:text-rose-400 aria-[current]:scale-110";
+
   view! {
     <nav class=move || {
       let myclass = "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-6 px-6 py-3 rounded-full border border-white/10 bg-black/40 backdrop-blur-md shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] transition-all duration-300 ease-in-out";
@@ -219,9 +222,11 @@ pub fn Navbar() -> impl IntoView {
         format!("{} translate-y-[200%] opacity-0", myclass)
       }
     }>
-			<a href="/" class="text-white/80 hover:text-white transition-colors duration-200">"Home"</a>
-			<a href="/cryptarithm" class="text-white/80 hover:text-white transition-colors duration-200">"Crypt"</a>
-			<a href="/game" class="text-white/80 hover:text-white transition-colors duration-200">"Game"</a>
+			<A href="/" exact=true {..} class={format!("{} {}", base_lncs, active_lncs)}><IconHome /></A>
+			<A href="/cryptarithm" {..} class={format!("{} {}", base_lncs, active_lncs)}><IconCryptarithm /></A>
+			<A href="/game" {..} class={format!("{} {}", base_lncs, active_lncs)}><IconGame /></A>
+			<A href="/motivasi" {..} class={format!("{} {}", base_lncs, active_lncs)}><IconMotivasi /></A>
+			<A href="/static/index.html" {..} class={format!("{} {}", base_lncs, active_lncs)}><IconOld /></A>
 		</nav>
   }
 }
